@@ -9,9 +9,10 @@ public class lockedMe {
 		while(true) {
 			System.out.println("Welcome to LockedMe.com, developed by Jasmine Davies");
 			System.out.println("_____________________________________________");
-			System.out.println("Please select an option: ");
+			System.out.println(" ");
+			System.out.println("Insert the number below for the option you'd like to action...");
 			System.out.println("1. View files | 2. add file | 3.delete file | 4. search file | 5. close app");
-			System.out.println("Insert the number for the option you'd like to action...");
+			
 			
 			int option = userInput.nextInt();
 			
@@ -19,7 +20,8 @@ public class lockedMe {
 			if (option == 1) {
 				while(true) {
 					
-					System.out.println("viewing files...");
+					System.out.println("[Placeholder for logic] viewing files...");
+					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
 					
@@ -39,7 +41,8 @@ public class lockedMe {
 				
 				while(true) {
 					
-					System.out.println("adding file...");
+					System.out.println("[Placeholder for logic] adding file...");
+					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
 					
@@ -58,7 +61,8 @@ public class lockedMe {
 				
 				while(true) {
 					
-					System.out.println("deleting file...");
+					System.out.println("[Placeholder for logic] deleting file...");
+					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
 					
@@ -77,7 +81,8 @@ public class lockedMe {
 				
 				while(true) {
 					
-					System.out.println("searching file");
+					System.out.println("[Placeholder for logic] searching file");
+					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
 					
@@ -93,7 +98,7 @@ public class lockedMe {
 				}
 				
 			}else if(option == 5) {
-				System.out.println("closing application, goodbye!");
+				System.out.println("Closing application, goodbye!");
 				break;
 			}
 			
