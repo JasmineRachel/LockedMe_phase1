@@ -36,12 +36,62 @@ public class lockedMe {
 	
 				
 			}else if (option == 2) {
-				System.out.println("adding files");
+				
+				while(true) {
+					
+					System.out.println("adding file...");
+					System.out.println("Back to main menu?");
+					System.out.println("1. Yes | 2. No ");
+					
+					int decision = userInput.nextInt();
+					if(decision == 1) {
+						break;
+					}else {
+						
+						System.out.println("Continue adding files...");
+						continue;
+					}
+
+				}
 				
 			}else if(option == 3) {
-				System.out.println("deleting file");
+				
+				while(true) {
+					
+					System.out.println("deleting file...");
+					System.out.println("Back to main menu?");
+					System.out.println("1. Yes | 2. No ");
+					
+					int decision = userInput.nextInt();
+					if(decision == 1) {
+						break;
+					}else {
+						
+						System.out.println("Continue deleting files...");
+						continue;
+					}
+
+				}
+				
 			}else if(option == 4) {
-				System.out.println("searching file");
+				
+				while(true) {
+					
+					System.out.println("searching file");
+					System.out.println("Back to main menu?");
+					System.out.println("1. Yes | 2. No ");
+					
+					int decision = userInput.nextInt();
+					if(decision == 1) {
+						break;
+					}else {
+						
+						System.out.println("Continue searching files...");
+						continue;
+					}
+
+				}
+				
 			}else if(option == 5) {
 				System.out.println("closing application, goodbye!");
 				break;
