@@ -1,6 +1,7 @@
 package com.org.lockedMe;
 import java.io.File; 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileActions {
@@ -37,7 +38,7 @@ public class FileActions {
 	
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -58,13 +59,23 @@ public class FileActions {
 	static void view_files(){
 
 		File directory = new File(getDirPath());
-		
 		String[] files = directory.list();
 		
+		ArrayList <String> fileList = new ArrayList <String>();
 		for(String file : files) {
-			System.out.println(file);
+			fileList.add(file);
 		}
-		
+		System.out.println(fileList.size());
+		if (fileList.size() > 0 ) {
+			System.out.println("Here are your files...");
+			System.out.println(" ");
+			for(String file : fileList) {
+				System.out.println(file);
+			}
+		} else{
+
+			System.out.println("no files are stored in this directory");
+		}
 		
 	}
 
