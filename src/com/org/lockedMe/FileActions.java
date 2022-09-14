@@ -10,16 +10,26 @@ public class FileActions {
 		return path;
 		
 	}
+	static File getFileName() {
+		String path = getDirPath();
+		Scanner userInput = new Scanner(System.in);
+		String fileName = userInput.nextLine();
+		File file = new File(path+"/"+fileName);
+		
+		return file;
+	}
 	
 	
 	static void add_file() {
 		
 		try {
-			String path = getDirPath();
-			Scanner userInput = new Scanner(System.in);
 			System.out.println("Enter the name of the file you'd like to add: ");
-			String fileName = userInput.nextLine();
-			File file = new File(path+"/"+fileName);
+//			String path = getDirPath();
+//			Scanner userInput = new Scanner(System.in);
+//			
+//			String fileName = userInput.nextLine();
+//			File file = new File(path+"/"+fileName);
+			File file = getFileName();
 			
 			if (file.createNewFile()) {
 			      
@@ -37,11 +47,13 @@ public class FileActions {
 	}
 	
 	static void delete_file() {
-		String path = getDirPath();
-		Scanner userInput = new Scanner(System.in);
-		System.out.println("Enter the name of the file you'd like to add: ");
-		String fileName = userInput.nextLine();
-		File file = new File(path+"/"+fileName);
+		System.out.println("Enter the name of the file you'd like to delete: ");
+//		String path = getDirPath();
+//		Scanner userInput = new Scanner(System.in);
+//		System.out.println("Enter the name of the file you'd like to add: ");
+//		String fileName = userInput.nextLine();
+//		File file = new File(path+"/"+fileName);
+		File file = getFileName();
 		
 		if (file.exists()){
 			file.delete();
