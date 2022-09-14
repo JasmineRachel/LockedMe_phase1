@@ -1,11 +1,14 @@
 package com.org.lockedMe;
+import java.io.File;  
 import java.util.Scanner;
 
-public class lockedMe {
+public class lockedMe extends FileActions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner userInput = new Scanner(System.in);
+		File file = new File("LockedMe_dir");  
+		file.mkdir();
 		while(true) {
 			System.out.println("Welcome to LockedMe.com, developed by Jasmine Davies");
 			System.out.println("_____________________________________________");
@@ -19,8 +22,8 @@ public class lockedMe {
 			
 			if (option == 1) {
 				while(true) {
-					
 					System.out.println("[Placeholder for logic] viewing files...");
+					
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
@@ -100,6 +103,7 @@ public class lockedMe {
 			}else if(option == 5) {
 				System.out.println("Closing application, goodbye!");
 				break;
+				
 			}
 			
 		}
