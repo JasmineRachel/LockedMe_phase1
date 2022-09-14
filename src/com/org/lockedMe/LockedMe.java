@@ -2,14 +2,15 @@ package com.org.lockedMe;
 import java.io.File;  
 import java.util.Scanner;
 
-public class lockedMe extends FileActions {
+public class LockedMe extends FileActions {
+
+
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner userInput = new Scanner(System.in);
 		
-		File file = new File("LockedMe_dir");  
-		file.mkdir();
+		File directory = new File("LockedMe_dir");  
+		directory.mkdir();
 		
 		while(true) {
 			System.out.println("Welcome to LockedMe.com(protoype), developed by Jasmine Davies");

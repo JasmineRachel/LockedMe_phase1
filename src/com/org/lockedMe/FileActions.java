@@ -4,23 +4,30 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class FileActions {
+	static String getDirPath() {
+		File directory = new File("LockedMe_dir");
+		String path = directory.getAbsolutePath();
+		return path;
+		
+	}
 	static void add_file() {
 		
 		try {
+			String path = getDirPath();
 			Scanner userInput = new Scanner(System.in);
 			System.out.println("Enter the name of the file you'd like to add: ");
 			String fileName = userInput.nextLine();
-			//TODO: find away to get a dynamic path
-			File file = new File("/Users/jasminedavies/Desktop/Assignments/phase1/LockedMe_dir/" +fileName);
+			File file = new File(path+"/"+fileName);
 			
 			if (file.createNewFile()) {
-				System.out.println(file.getAbsolutePath());
-			            
-				System.out.println("File has been created.");
+			      
+				System.out.println("File has been created: " + file.getAbsolutePath());
 			} else {
 			        
 				System.out.println("File already exists.");
 			}
+	
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
