@@ -33,5 +33,9 @@ public class FileActions {
 			e.printStackTrace();
 		}
 	}
+	
+	static void delete_file() {
+		
+	}
 
 }
