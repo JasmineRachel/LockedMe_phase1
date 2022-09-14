@@ -12,7 +12,7 @@ public class lockedMe extends FileActions {
 		file.mkdir();
 		
 		while(true) {
-			System.out.println("Welcome to LockedMe.com, developed by Jasmine Davies");
+			System.out.println("Welcome to LockedMe.com(protoype), developed by Jasmine Davies");
 			System.out.println("_____________________________________________");
 			System.out.println(" ");
 			System.out.println("Insert the number below for the option you'd like to action...");
@@ -45,7 +45,6 @@ public class lockedMe extends FileActions {
 				
 				while(true) {
 					
-//					System.out.println("adding file...");
 					add_file();
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
