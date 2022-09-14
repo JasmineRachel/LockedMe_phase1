@@ -54,5 +54,18 @@ public class FileActions {
 			System.out.println("File not found");
 		}
 	}
+	
+	static void view_files(){
+
+		File directory = new File(getDirPath());
+		
+		String[] files = directory.list();
+		
+		for(String file : files) {
+			System.out.println(file);
+		}
+		
+		
+	}
 
 }
