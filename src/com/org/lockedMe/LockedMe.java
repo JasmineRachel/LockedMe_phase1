@@ -66,7 +66,7 @@ public class LockedMe extends FileActions {
 				
 				while(true) {
 					
-					System.out.println("[Placeholder for logic] deleting file...");
+					delete_file();
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");

@@ -10,6 +10,8 @@ public class FileActions {
 		return path;
 		
 	}
+	
+	
 	static void add_file() {
 		
 		try {
@@ -35,7 +37,18 @@ public class FileActions {
 	}
 	
 	static void delete_file() {
+		String path = getDirPath();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Enter the name of the file you'd like to add: ");
+		String fileName = userInput.nextLine();
+		File file = new File(path+"/"+fileName);
 		
+		if (file.exists()){
+			file.delete();
+			System.out.println("File deleted");
+		}else {
+			System.out.println("File not found");
+		}
 	}
 
 }
