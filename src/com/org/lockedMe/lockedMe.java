@@ -7,8 +7,10 @@ public class lockedMe extends FileActions {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner userInput = new Scanner(System.in);
+		
 		File file = new File("LockedMe_dir");  
 		file.mkdir();
+		
 		while(true) {
 			System.out.println("Welcome to LockedMe.com, developed by Jasmine Davies");
 			System.out.println("_____________________________________________");
@@ -23,7 +25,6 @@ public class lockedMe extends FileActions {
 			if (option == 1) {
 				while(true) {
 					System.out.println("[Placeholder for logic] viewing files...");
-					
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
@@ -44,7 +45,8 @@ public class lockedMe extends FileActions {
 				
 				while(true) {
 					
-					System.out.println("[Placeholder for logic] adding file...");
+//					System.out.println("adding file...");
+					add_file();
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");

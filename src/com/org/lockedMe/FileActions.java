@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class FileActions {
-	static void add_file(String fileName) {
-		//TODO: find away to get a dynamic path
-		
+	static void add_file() {
 		
 		try {
+			Scanner userInput = new Scanner(System.in);
+			System.out.println("Enter the name of the file you'd like to add: ");
+			String fileName = userInput.nextLine();
+			//TODO: find away to get a dynamic path
 			File file = new File("/Users/jasminedavies/Desktop/Assignments/phase1/LockedMe_dir/" +fileName);
 			
 			if (file.createNewFile()) {
