@@ -24,11 +24,7 @@ public class FileActions {
 		
 		try {
 			System.out.println("Enter the name of the file you'd like to add: ");
-//			String path = getDirPath();
-//			Scanner userInput = new Scanner(System.in);
-//			
-//			String fileName = userInput.nextLine();
-//			File file = new File(path+"/"+fileName);
+
 			File file = getFileName();
 			
 			if (file.createNewFile()) {
@@ -48,11 +44,7 @@ public class FileActions {
 	
 	static void delete_file() {
 		System.out.println("Enter the name of the file you'd like to delete: ");
-//		String path = getDirPath();
-//		Scanner userInput = new Scanner(System.in);
-//		System.out.println("Enter the name of the file you'd like to add: ");
-//		String fileName = userInput.nextLine();
-//		File file = new File(path+"/"+fileName);
+
 		File file = getFileName();
 		
 		if (file.exists()){
