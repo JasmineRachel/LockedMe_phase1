@@ -84,16 +84,17 @@ public class FileActions {
 	static void search_file() {
 		System.out.println("Enter the name of the file you'd like to search: ");
 		File fileName = getFileName();
-
+		String searchedFile = fileName.getName();
 		File directory = new File(getDirPath());
 		String[] files = directory.list();
+		
 		for(String file : files) {
-			
-			System.out.println(file);
-			
+			if(searchedFile.equals(file)) {
+				System.out.println(file);
+			}
+				
 		}
-			
-
+		
 	}
 
 }
