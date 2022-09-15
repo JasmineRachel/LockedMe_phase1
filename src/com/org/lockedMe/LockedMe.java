@@ -46,11 +46,9 @@ public class LockedMe extends FileActions {
 					}catch(InputMismatchException e) {
 						//TODO: find better solution to stop exception from being thrown
 						System.out.println("Wrong input! Try again.");
-						userInput.nextLine();
-//						
+						userInput.nextLine();	
 					}
-					
-					
+
 				}
 				
 			}else if (option == 2) {
