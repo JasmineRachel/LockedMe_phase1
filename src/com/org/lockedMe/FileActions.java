@@ -46,16 +46,22 @@ public class FileActions {
 	}
 	
 	static void delete_file() {
-		System.out.println("Enter the name of the file you'd like to delete: ");
+		try {
+			System.out.println("Enter the name of the file you'd like to delete: ");
 
-		File file = getFileName();
-		
-		if (file.exists()){
-			file.delete();
-			System.out.println("File deleted");
-		}else {
-			System.out.println("File not found");
+			File file = getFileName();
+			
+			if (file.exists()){
+				file.delete();
+				System.out.println("File deleted");
+			}else {
+				System.out.println("File not found");
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
+		
 	}
 	
 	static void view_files(){
