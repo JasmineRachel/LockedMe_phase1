@@ -25,7 +25,7 @@ public class LockedMe extends FileActions {
 			
 			if (option == 1) {
 				while(true) {
-					System.out.println("[Placeholder for logic] viewing files...");
+					view_files();
 					System.out.println(" ");
 					System.out.println("Back to main menu?");
 					System.out.println("1. Yes | 2. No ");
