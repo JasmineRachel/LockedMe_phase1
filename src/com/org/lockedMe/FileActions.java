@@ -46,18 +46,28 @@ public class FileActions {
 	}
 	
 	static void delete_file() {
+		
 		try {
+			
+			File directory = new File(getDirPath());
+			String[] files = directory.list();
 			System.out.println("Enter the name of the file you'd like to delete: ");
 
-			File file = getFileName();
-			
-			if (file.exists()){
-				file.delete();
-				System.out.println("File deleted");
-			}else {
+			File searchedFile = getFileName();
+			boolean fileDeleted = false;
+			for (String file : files) {
+				if(searchedFile.getName().equals(file)) {
+					System.out.println(file + " is the file you wish to delete");
+					File selectedFile = new File(directory.getAbsolutePath()+ "/" + file);
+					selectedFile.delete();
+					System.out.println(file + " file deleted");
+					fileDeleted = true;
+				}
+			}
+			if (fileDeleted == false) {
 				System.out.println("File not found");
 			}
-			
+
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
