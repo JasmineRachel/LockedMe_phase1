@@ -2,6 +2,7 @@ package com.org.lockedMe;
 import java.io.File; 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class FileActions {
@@ -65,7 +66,8 @@ public class FileActions {
 		for(String file : files) {
 			fileList.add(file);
 		}
-		System.out.println(fileList.size());
+		Collections.sort(fileList);
+	
 		if (fileList.size() > 0 ) {
 			System.out.println("Here are your files...");
 			System.out.println(" ");
